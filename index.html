@@ -1,0 +1,142 @@
+<html>
+
+<head>
+    <title>Assembly Simulator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .buttons-container {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+            justify-content: center;
+            width: 100%;
+        }
+
+        .output-container {
+            display: flex;
+            gap: 20px;
+            flex-direction: column;
+            width: 100%;
+            max-width: 1000px;
+        }
+
+        .output-row {
+            display: flex;
+            gap: 20px;
+            width: 100%;
+        }
+
+        .output-section {
+            border: 1px solid #ddd;
+            padding: 10px;
+            background-color: #fff;
+            border-radius: 8px;
+            flex: 1;
+            min-height: 150px;
+            overflow-y: auto;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .highlight {
+            background-color: #ffff99;
+        }
+
+        .controls {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        button {
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+
+        h3 {
+            text-align: center;
+            margin-top: 0;
+        }
+
+        #editor {
+            height: 200px;
+            resize: none;
+        }
+
+        textarea {
+            width: 400px;
+            border: 1px solid #ddd;
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            font-family: inherit;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="buttons-container">
+        <button id="run-exe">Run Executable</button>
+        <button id="generate-exe">Generate Executable</button>
+        <button id="clear">Clear</button>
+    </div>
+
+    <textarea id="editor" class="output-section" placeholder="Type your instructions here..."></textarea>
+
+    <div class="output-container">
+        <div class="output-row">
+            <div id="instructions-output" class="output-section">
+                <h3>Instructions</h3>
+                <pre id="instructions-text"></pre>
+            </div>
+
+            <div id="registers-output" class="output-section">
+                <h3>Registers</h3>
+                <pre id="registers-text"></pre>
+            </div>
+        </div>
+
+        <div class="output-row">
+            <div id="memory-output" class="output-section">
+                <h3>Binary Instructions</h3>
+                <pre id="memory-text"></pre>
+            </div>
+
+            <div id="console-output" class="output-section">
+                <h3>Console Log</h3>
+                <pre id="console-text"></pre>
+            </div>
+        </div>
+    </div>
+
+    <div class="controls">
+        <button id="prev">Previous</button>
+        <button id="next">Next</button>
+    </div>
+
+    <script src="renderer.js"></script>
+</body>
+
+</html>
