@@ -1,3 +1,0 @@
-/c/Users/Dylan/Documents/Syracuse/my-instruction-simulator/CMakeFiles/hw2.dir
-/c/Users/Dylan/Documents/Syracuse/my-instruction-simulator/CMakeFiles/edit_cache.dir
-/c/Users/Dylan/Documents/Syracuse/my-instruction-simulator/CMakeFiles/rebuild_cache.dir
